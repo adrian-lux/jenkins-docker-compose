@@ -1,0 +1,9 @@
+version: '2'
+  services:
+    compile:
+      build:
+        context: .
+        dockerfile: ./php-apache/dockerfile
+      args:
+      volumes:
+        - .:/var/www
