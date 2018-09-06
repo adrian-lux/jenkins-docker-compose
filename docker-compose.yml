@@ -2,8 +2,11 @@ version: '2'
   services:
     compile:
       build:
-        context: .
-        dockerfile: ./php-apache/dockerfile
-      args:
+          context: .
+          dockerfile: ./php-apache/dockerfile
+      container_name: test_container
+      ports:
+        - 8088:80
       volumes:
         - .:/var/www
+      tty: true
